@@ -170,11 +170,11 @@ body {
 
 @media screen and (max-width: 62rem) {
   html {
-    font-size: 58%;
+    font-size: 60%;
   }
   .card {
     flex-direction: column;
-    margin: 3rem 2rem 0 2rem;
+    margin: 3rem 2rem 1rem 2rem;
     max-width: 50rem;
   }
 
@@ -191,5 +191,6 @@ body {
   .content-container {
     max-width: 100%;
     height: 40rem;
+    padding: 2.5rem;
   }
 }
