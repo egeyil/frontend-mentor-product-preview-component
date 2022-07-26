@@ -1,0 +1,195 @@
+/*
+***** DESIGN SYSTEM *****
+
+**************
+- FONT SIZES(px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+***************
+- SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+***************
+---- SHADOWS 
+
+
+***************
+---- BORDER RADII (px)
+Default: 9px
+
+***************
+---- WHITESPACE 
+
+***************
+*/
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: hsl(158, 36%, 37%);
+  --secondary: hsl(30, 38%, 92%);
+  --shade-1: hsl(212, 21%, 14%);
+  --shade-green: #1e4034;
+  --grey-1: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+  --border-radius: 9px;
+  --font-size-title: 1.05rem;
+  --font-size-paragraph: 1.4rem;
+  --font-weight-base: 500;
+  --font-weight-bold: 700;
+  --line-height-base: 1;
+  --line-height-title: 1.05;
+  --line-height-paragraph: 1.6;
+  --whitespace-base: 1;
+  --whitespace-title: 1.05;
+  --whitespace-paragraph: 1.6;
+  --border-radius-base: 9px;
+}
+
+html {
+  /* font-size: 10px;
+  10px / 16px = 0.625 = 62.5%
+  Percentage of the user's browser font-size setting. */
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: var(--line-height-base);
+  font-weight: var(--font-weight-base);
+  background-color: var(--secondary);
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  max-width: 60rem;
+  margin-top: 10rem;
+  overflow: hidden;
+  border-radius: var(--border-radius-base);
+  background-color: var(--white);
+}
+
+.image-container {
+  max-width: 50%;
+}
+
+.image{
+  width: 100%;
+  height: 100%;
+}
+
+.content-container{
+  padding: 3rem;
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.heading {
+  font-family: 'Fraunces', sans-serif;
+  font-weight: var(--font-weight-bold);
+  font-size: 3.2rem;
+  line-height: var(--line-height-title);
+}
+
+.sub-heading{
+  letter-spacing: 0.4rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: var(--font-weight-base);
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+.paragraph{
+  font-size: var(--font-size-paragraph);
+  font-size: 1.4rem;
+  line-height: var(--line-height-paragraph);
+}
+
+.sub-heading, .paragraph{
+  color: var(--grey-1);
+}
+
+.prices-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.price-new{
+  color: var(--primary);
+  font-size: 3.2rem;
+  font-family: 'Fraunces', sans-serif;
+}
+
+.price-old{
+  color: var(--grey-1);
+  font-size: 1.4rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: var(--font-weight-base);
+  text-decoration: line-through;
+  margin-left: 2rem;
+}
+
+.btn {
+  width: 100%;
+  background-color: var(--primary);
+  border: none;
+  border-radius: var(--border-radius-base);
+  color: var(--white);
+  padding: 1.5rem 2rem;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: var(--shade-green);
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.6rem;
+}
+
+@media screen and (max-width: 62rem) {
+  html {
+    font-size: 58%;
+  }
+  .card {
+    flex-direction: column;
+    margin: 3rem 2rem 0 2rem;
+    max-width: 50rem;
+  }
+
+  .image-container {
+    max-width: 100%;
+  }
+
+  .image{
+    max-height: 30rem;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .content-container {
+    max-width: 100%;
+    height: 40rem;
+  }
+}
